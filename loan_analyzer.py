@@ -41,9 +41,11 @@ print(f"Average loan amount is {average_loan_amount}")
 
 Analyze the loan to determine the investment evaluation.
 
-Using more detailed data on one of these loans, follow these steps to calculate a Present Value, or a "fair price" for what this loan would be worth.
+Using more detailed data on one of these loans, follow these steps to calculate a Present Value, 
+or a "fair price" for what this loan would be worth.
 
-1. Use get() on the dictionary of additional information to extract the **Future Value** and **Remaining Months** on the loan.
+1. Use get() on the dictionary of additional information to extract the 
+**Future Value** and **Remaining Months** on the loan.
     a. Save these values as variables called `future_value` and `remaining_months`.
     b. Print each variable.
 
@@ -61,17 +63,29 @@ Using more detailed data on one of these loans, follow these steps to calculate 
 """
 
 # Given the following loan data, you will need to calculate the present value for the loan
-# loan = {
-#     "loan_price": 500,
-#     "remaining_months": 9,
-#     "repayment_interval": "bullet",
-#     "future_value": 1000,
-# }
+loan = {
+    "loan_price": 500,
+    "remaining_months": 9,
+    "repayment_interval": "bullet",
+    "future_value": 1000,
+}
 
-# @TODO: Use get() on the dictionary of additional information to extract the Future Value and Remaining Months on the loan.
+# @TODO: Use get() on the dictionary of additional information to extract 
+# the Future Value and Remaining Months on the loan.
 # Print each variable.
 # YOUR CODE HERE!
 
+loan_price = loan.get("loan_price")
+print(f"Loan price is {loan_price}")
+
+remaining_months = loan.get("remaining_months")
+print(f"Remaining months  is {remaining_months}")
+
+repayment_interval = loan.get("repayment_interval")
+print(f"Repayment interval is {repayment_interval}")
+
+future_value = loan.get("future_value")
+print(f"Future value is {future_value}")
 
 # @TODO: Use the formula for Present Value to calculate a "fair value" of the loan.
 # Use a minimum required return of 20% as the discount rate.
