@@ -34,6 +34,9 @@ print(f"Total value of loans is {total_value_of_loans}")
 # Print the average loan amount
 # YOUR CODE HERE!
 
+average_loan_amount = total_value_of_loans/ total_number_of_loans
+print(f"Average loan amount is {average_loan_amount}")
+
 """Part 2: Analyze Loan Data.
 
 Analyze the loan to determine the investment evaluation.
