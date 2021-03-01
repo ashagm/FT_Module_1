@@ -199,7 +199,7 @@ inexpensive_loans = []
 
 for loan in loans:
     if loan["loan_price"] <= 500:
-        inexpensive_loans.append(loan["loan_price"])
+        inexpensive_loans.append(loan)
 
 # @TODO: Print the `inexpensive_loans` list
 # YOUR CODE HERE!
@@ -225,6 +225,42 @@ header = ["loan_price", "remaining_months", "repayment_interval", "future_value"
 # Set the output file path
 output_path = Path("inexpensive_loans.csv")
 
+
+
 # @TODO: Use the csv library and `csv.writer` to write the header row
 # and each row of `loan.values()` from the `inexpensive_loans` list.
 # YOUR CODE HERE!
+
+print("Writing the data to a CSV file...")
+
+# Open the output CSV file path using `with open`
+with open(output_path, "w") as csvfile:
+    # Create a csvwriter
+    csvwriter = csv.writer(csvfile, delimiter=",")
+
+    # Write the header to the CSV file
+    csvwriter.writerow(header)
+
+    for loan in inexpensive_loans:
+        csvwriter.writerow(loan.values())
+
+
+
+
+# # Current directory (relative):
+# cwd = Path() # or Path('.')
+# print(cwd)
+
+# # Current directory (absolute):
+# cwd = Path.cwd()
+# print(cwd)
+
+# # User home directory:
+# home = Path.home()
+# print(home)
+
+# # Something inside the current directory
+# file_path = Path('inexpensive_loans.csv') # relative path; or 
+# file_path = Path()/'inexpensive_loans.csv' # also relative path
+# file_path = Path().resolve()/Path('inexpensive_loans.csv') # absolute path
+# print(file_path)
